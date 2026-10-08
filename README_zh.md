@@ -1,4 +1,4 @@
-# Pet 高松灯企鹅（Pet Takamatsu Lantern Penguin）
+# Pet 高松灯企鹅（Pet Tomori Takamatsu Penguin）
 
 一个 Minecraft Fabric 模组，添加了一只以《BanG Dream!》中的**高松灯**为原型的可爱企鹅宠物。
 
