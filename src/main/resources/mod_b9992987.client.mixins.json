@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "cn.blockforge.generated.modb9992987.client.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "client": [
+    "HeldItemRendererMixin",
+    "SpecialModelTypesAccessor",
+    "SpecialModelTypesMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

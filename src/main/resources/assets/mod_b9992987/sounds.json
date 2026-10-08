@@ -1,0 +1,62 @@
+{
+  "entity.penguin_pet.idle": {
+    "category": "neutral",
+    "sounds": [
+      { "name": "mod_b9992987:mob/pet/idle", "volume": 1.0 }
+    ]
+  },
+  "entity.penguin_pet.happy": {
+    "category": "neutral",
+    "sounds": [
+      { "name": "mod_b9992987:mob/pet/happy", "volume": 1.0 }
+    ]
+  },
+  "entity.penguin_pet.angry": {
+    "category": "neutral",
+    "sounds": [
+      { "name": "mod_b9992987:mob/pet/angry", "volume": 1.0 }
+    ]
+  },
+  "entity.penguin_pet.excited": {
+    "category": "neutral",
+    "sounds": [
+      { "name": "mod_b9992987:mob/pet/excited", "volume": 1.0 }
+    ]
+  },
+  "entity.penguin_pet.sniff": {
+    "category": "neutral",
+    "sounds": [
+      { "name": "mod_b9992987:mob/pet/sniff", "volume": 1.0 }
+    ]
+  },
+  "entity.penguin_pet.play": {
+    "category": "neutral",
+    "sounds": [
+      { "name": "mod_b9992987:mob/pet/play", "volume": 1.0 }
+    ]
+  },
+  "entity.penguin_pet.carry": {
+    "category": "neutral",
+    "sounds": [
+      { "name": "mod_b9992987:mob/pet/carry", "volume": 0.8 }
+    ]
+  },
+  "entity.penguin_pet.question": {
+    "category": "neutral",
+    "sounds": [
+      { "name": "mod_b9992987:mob/pet/question", "volume": 1.0 }
+    ]
+  },
+  "entity.penguin_pet.hurt": {
+    "category": "neutral",
+    "sounds": [
+      { "name": "mod_b9992987:mob/pet/hurt", "volume": 1.0 }
+    ]
+  },
+  "entity.penguin_pet.boss_theme": {
+    "category": "hostile",
+    "sounds": [
+      { "name": "mod_b9992987:mob/pet/boss_theme", "volume": 1.0, "stream": true }
+    ]
+  }
+}

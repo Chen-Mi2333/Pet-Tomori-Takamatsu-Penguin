@@ -1,0 +1,49 @@
+// 26.1.2 官方构建链要求 Fabric Loom 1.18，但平台固定运行 Gradle 9.5.1。
+// Loom 1.18 的插件标记只发布 Gradle 9.7 运行时变体，会被 9.5.1 的插件解析拒绝。
+// 因此不走 plugins{} 标记，改从 buildscript 类路径直接加载同一版 Loom 实现。
+buildscript {
+    repositories {
+        maven { url = 'https://maven.fabricmc.net/' }
+        mavenCentral()
+        gradlePluginPortal()
+    }
+    dependencies {
+        classpath 'net.fabricmc:fabric-loom:1.18.3'
+    }
+    configurations.classpath {
+        attributes {
+            attribute(org.gradle.api.attributes.plugin.GradlePluginApiVersion.GRADLE_PLUGIN_API_VERSION_ATTRIBUTE,
+                project.objects.named(org.gradle.api.attributes.plugin.GradlePluginApiVersion, '9.7.0'))
+        }
+    }
+}
+
+apply plugin: net.fabricmc.loom.LoomNoRemapGradlePlugin
+
+version = project.mod_version
+group = project.maven_group
+
+repositories { mavenCentral() }
+
+dependencies {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    implementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+}
+
+processResources {
+    inputs.property "version", project.version
+    // filter 同样按 filteringCharset 读写，不显式设成 UTF-8 时取平台默认
+    // （容器里常是 ASCII），会把 description 里的中文破坏成非法 UTF-8：
+    // Gradle 仍报 BUILD SUCCESSFUL，但最终 JAR 里的 JSON 已经坏了。
+    filteringCharset = 'UTF-8'
+    // 只替换版本占位符。Gradle expand 会把 JSON 字符串里的 \n 解释成真实换行，
+    // 造成源文件合法、最终 JAR 中 fabric.mod.json 却损坏。
+    filesMatching("fabric.mod.json") {
+        filter { line -> line.replace('${version}', project.version.toString()) }
+    }
+}
+
+tasks.withType(JavaCompile).configureEach { options.release = 25; options.encoding = 'UTF-8' }
+java { toolchain.languageVersion = JavaLanguageVersion.of(25); withSourcesJar() }
+base { archivesName = project.archives_base_name }

@@ -1,0 +1,27 @@
+{
+  "model": {
+    "type": "minecraft:select",
+    "property": "minecraft:display_context",
+    "cases": [
+      {
+        "when": [
+          "gui",
+          "ground",
+          "fixed",
+          "on_shelf"
+        ],
+        "model": {
+          "type": "minecraft:model",
+          "model": "mod_b9992987:item/block_slingshot_inventory"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:special",
+      "base": "mod_b9992987:item/block_slingshot_special_base",
+      "model": {
+        "type": "mod_b9992987:block_slingshot"
+      }
+    }
+  }
+}

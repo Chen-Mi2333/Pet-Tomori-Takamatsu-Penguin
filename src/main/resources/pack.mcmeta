@@ -1,0 +1,12 @@
+{
+  "pack": {
+    "pack_format": 64,
+    "description": "咕咕嘎嘎凑企鹅高松灯",
+    "supported_formats": {
+      "min_inclusive": 0,
+      "max_inclusive": 999
+    },
+    "min_format": 0,
+    "max_format": 999
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "S S",
+    " LS",
+    " S "
+  ],
+  "key": {
+    "S": "minecraft:stick",
+    "L": "minecraft:leather"
+  },
+  "result": {
+    "id": "mod_b9992987:block_slingshot",
+    "count": 1
+  }
+}

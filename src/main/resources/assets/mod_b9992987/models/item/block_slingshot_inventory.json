@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "mod_b9992987:item/block_slingshot_r50"
+  }
+}

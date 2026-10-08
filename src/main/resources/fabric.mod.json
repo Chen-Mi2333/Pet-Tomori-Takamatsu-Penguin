@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "mod_b9992987",
+  "version": "${version}",
+  "name": "咕咕嘎嘎凑企鹅高松灯",
+  "description": "咕咕嘎嘎凑企鹅高松灯：9 格表情轮盘、情绪成长、左肩携带、钻石嗅探指引、捡石头动作，1:1 模型与原版音效还原。",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "cn.blockforge.generated.modb9992987.GeneratedMod"
+    ],
+    "client": [
+      "cn.blockforge.generated.modb9992987.client.GeneratedModClient"
+    ]
+  },
+  "mixins": [
+    "mod_b9992987.client.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "~26.1.2",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}
