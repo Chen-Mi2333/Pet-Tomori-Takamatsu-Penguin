@@ -1,5 +1,7 @@
 # Pet Takamatsu Lantern Penguin
 
+English | [中文](README_zh.md)
+
 A Minecraft Fabric mod that adds a cute penguin pet based on **Takamatsu Lantern** (高松灯) from *BanG Dream!*.
 
 ## Features
